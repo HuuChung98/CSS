@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    background-color: #090909;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: 1px solid #9AFF9A;
+    background-color: #00BFFF;
+    cursor: pointer;
+    position: relative;
+}
+
+button div {
+    padding: 1.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+button a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ece8e1;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+button div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(27, 62, 50);
+    transition: .5s;
+    z-index: -1;
+}
+
+button:hover {
+    border: 2px solid #4EEE94;
+}
+
+button div:hover::before {
+    width: 100%;
+    z-index: 1;
+}
